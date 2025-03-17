@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook - Create Post</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+        }
+
+        /* Header */
+        .header {
+            background-color: #1877f2;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .container {
+            width: 500px;
+            margin: 20px auto;
+        }
+
+        /* Post Form */
+        .post-box {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .post-box textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            resize: none;
+            font-size: 14px;
+            height: 80px;
+        }
+
+        .post-box input[type="file"] {
+            margin-top: 10px;
+        }
+
+        .post-box button {
+            width: 100%;
+            padding: 10px;
+            background-color: #1877f2;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        .post-box button:hover {
+            background-color: #1558a0;
+        }
+
+        /* Posts Section */
+        .posts {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .post {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .post .post-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .post .profile-pic {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: url('profile.jpg') center/cover;
+        }
+
+        .post .user-info {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .post .user-info span {
+            font-weight: bold;
+        }
+
+        .post .post-content {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .post .post-image {
+            width: 100%;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">Facebook</div>
+
+    <div class="container">
+
+        <!-- Post Form -->
+        <div class="post-box">
+            <form action="PostServlet" method="post" enctype="multipart/form-data">
+                <textarea name="postContent" placeholder="What's on your mind?" required></textarea>
+                <input type="file" name="postImage" accept="image/*">
+                <button type="submit">Post</button>
+            </form>
+        </div>
+
+        <!-- Posts Section -->
+        <div class="posts">
+            <div class="post">
+                <div class="post-header">
+                    <div class="profile-pic"></div>
+                    <div class="user-info">
+                        <span>Sai</span> <br>
+                        <small>2 hrs ago</small>
+                    </div>
+                </div>
+                <div class="post-content">Enjoying the beautiful life! 🌅</div>
+                <img src="./post/post12.jpg" class="post-image">
+            </div>
+
+            <div class="post">
+                <div class="post-header">
+                    <div class="profile-pic"></div>
+                    <div class="user-info">
+                        <span>Manasa</span> <br>
+                        <small>5 hrs ago</small>
+                    </div>
+                </div>
+                <div class="post-content">haha! 🍽️</div>
+                <img src="./post/post2.jpg" class="post-image">
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

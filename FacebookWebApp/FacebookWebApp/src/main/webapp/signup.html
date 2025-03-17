@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Signup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        .logo {
+            font-size: 50px;
+            font-weight: bold;
+            color: #1877f2;
+            font-family: 'Helvetica Neue', sans-serif;
+            margin-bottom: 20px;
+        }
+        .signup-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+        h2 {
+            font-size: 18px;
+            color: #606770;
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
+        input, select {
+            width: 90%;
+            padding: 12px;
+            margin: 6px 0;
+            border: 1px solid #ccd0d5;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+        input:focus {
+            border-color: #1877f2;
+            outline: none;
+            box-shadow: 0 0 5px rgba(24, 119, 242, 0.3);
+        }
+        .gender-container {
+            width: 100%;
+            margin: 10px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+        .gender-box {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccd0d5;
+            padding: 10px;
+            border-radius: 6px;
+            width: 32%;
+            justify-content: center;
+            font-size: 14px;
+            cursor: pointer;
+            background: #f5f6f7;
+        }
+        .gender-box:hover {
+            background-color: #e7f3ff;
+            border-color: #1877f2;
+        }
+        .btn {
+            width: 100%;
+            padding: 14px;
+            background: #42b72a;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+        .btn:hover {
+            background: #36a420;
+        }
+        .label-text {
+            display: block;
+            text-align: left;
+            color: #606770;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="logo">facebook</div>
+
+    <form action="fburl" method="post">
+        <div class="signup-container">
+            <h2>Create a new account</h2>
+
+            <input type="text" name="firstname" placeholder="First name" required>
+            <input type="text" name="surname" placeholder="Surname" required>
+            
+            <input type="text" name="username" placeholder="Username" required>
+
+            <label class="label-text">Date of Birth</label>
+            <input type="date" name="dob" required>
+
+            <label class="label-text">Gender</label>
+            <div class="gender-container">
+                <label class="gender-box">
+                    <input type="radio" name="gender" value="female"> Female
+                </label>
+                <label class="gender-box">
+                    <input type="radio" name="gender" value="male"> Male
+                </label>
+                <label class="gender-box">
+                    <input type="radio" name="gender" value="custom"> Custom
+                </label>
+            </div>
+
+            <input type="email" name="email" placeholder="Mobile number or email" required>
+            <input type="password" name="password" placeholder="New password" required>
+            
+            <button type="submit" class="btn">Sign Up</button>
+        </div>
+    </form>
+
+</body>
+</html>
